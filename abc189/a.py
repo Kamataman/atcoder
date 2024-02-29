@@ -1,0 +1,8 @@
+c=list(str(input()))
+if c[0]==c[1]:
+    if c[1]==c[2]:
+        print('Won')
+    else:
+        print('Lost')
+else:
+    print('Lost')
