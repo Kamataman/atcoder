@@ -1,0 +1,59 @@
+{
+  "contest": {
+    "id": "adt_medium_20240404_3",
+    "title": "AtCoder Daily Training MEDIUM 2024/04/04 20:30start",
+    "url": "https://atcoder.jp/contests/adt_medium_20240404_3"
+  },
+  "tasks": [
+    {
+      "id": "abc288_b",
+      "label": "C",
+      "title": "Qualification Contest",
+      "url": "https://atcoder.jp/contests/adt_medium_20240404_3/tasks/abc288_b",
+      "directory": {
+        "path": "c",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc309_b",
+      "label": "D",
+      "title": "Rotate",
+      "url": "https://atcoder.jp/contests/adt_medium_20240404_3/tasks/abc309_b",
+      "directory": {
+        "path": "d",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc285_c",
+      "label": "E",
+      "title": "abc285_brutmhyhiizp",
+      "url": "https://atcoder.jp/contests/adt_medium_20240404_3/tasks/abc285_c",
+      "directory": {
+        "path": "e",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc318_c",
+      "label": "F",
+      "title": "Blue Spring",
+      "url": "https://atcoder.jp/contests/adt_medium_20240404_3/tasks/abc318_c",
+      "directory": {
+        "path": "f",
+        "testdir": "tests"
+      }
+    },
+    {
+      "id": "abc252_d",
+      "label": "G",
+      "title": "Distinct Trio",
+      "url": "https://atcoder.jp/contests/adt_medium_20240404_3/tasks/abc252_d",
+      "directory": {
+        "path": "g",
+        "testdir": "tests"
+      }
+    }
+  ]
+}
