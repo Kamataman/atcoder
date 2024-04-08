@@ -5,5 +5,5 @@
 # $3 problem_name
 
 cd ./$1/$2/$3/
-acc submit $3.py -- -l 5055
+acc submit $3.py -- --guess-python-interpreter pypy
 cd /workspaces/atcoder/
