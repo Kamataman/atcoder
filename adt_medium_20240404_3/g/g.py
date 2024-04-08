@@ -3,12 +3,19 @@ a=list(map(int,input().split()))
 
 UPPER=2*10**5+1
 memo=[0]*UPPER
-for ai in a:
-    for i in range(ai+1,UPPER):
-        memo[i]+=1
 
+a.sort()
+for ai in a:
+    memo[ai]+=1
 count=0
-for j in range(n):
-     count+=memo[a[j]]*(n-memo[a[j]]-1)
-     print(count)
-print(count)
+for i in range(UPPER):
+    count+=memo[i]
+    memo[i]=count
+
+sum=0
+for ai in a:
+    sum+=memo[ai-1]*(len(a)-memo[ai])
+
+# print(a)
+# print(memo[:10])
+print(sum)
