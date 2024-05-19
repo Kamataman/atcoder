@@ -1,28 +1,15 @@
-a,b,c,d=map(int,input().split())
+a,b,c,d=map(lambda x: x+10**9,map(int,input().split()))
 
-def calc(c,d):
-    c_=c//4
-    d_=d//2
-    s=c_*d_/2
-    cmod=c%4
-    if cmod==1:
-        s+=d_*3/2
-    elif cmod==2:
-        s+=d_*3
-    elif cmod==3:
-        s+=d_*7/2
-    
-    dmod=d%2
-    if dmod==1:
-        if cmod==0:
-            s+=c_*2   
-        elif cmod==1:
-            s+=c_*2+1            
-        elif cmod==2:
-            s+=c_*2+3/2            
-        elif cmod==3:
-            s+=c_*2+3/2            
-    return s*2    
+def calc(x,y):
+    s1=(x//4)*(y//2)*8
+    s2_pattern=[0,3,6,7]
+    s2=s2_pattern[x%4]*(y//2)
+    s3_pattern=[0,4]
+    s3=s3_pattern[y%2]*(x//4)
+    s4_pattern=[[0,0,0,0],[0,2,3,3]]
+    s4=s4_pattern[y%2][x%4]
+    # print(s1,s2,s3,s4)
+    return s1+s2+s3+s4
 
-s=calc(c-a,d-b)
-print(s)
+ans=calc(c,d)-calc(a,d)-calc(c,b)+calc(a,b)
+print(ans)
