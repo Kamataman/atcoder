@@ -1,26 +1,24 @@
 n,m,k=map(int,input().split())
-conb=[False]*(1<<n)
-c=[],a=[],r=[]
+c,a,r=[],[],[]
 for i in range(m):
-    print(conb)
     line=input().split()
     c.append(int(line[0]))
-    a.append(list(map(int,line[1:c+1])))
+    a.append(list(map(int,line[1:c[i]+1])))
     r.append(line[-1])
-    
-for con in conb:
-    for i in range(m):        
-        if r[i]=='o':
-            mask=0
-            for ai in a:
-                mask+=1<<(ai-1)
-            if con
-        elif r[i]=='x':
-            conb[con]=False
 
-print(conb)
 ans=0
-for con in conb:
-    if con==True:
-        ans+=1
+for cand in range(1<<n):
+    ok=True
+    for i in range(m):
+        # テストと同じビットが立っている個数を調べる
+        cnt=0
+        for ai in a[i]:
+            cnt+=(cand>>(ai-1))&1
+        # (cnt>=k) ：A  (r[i]=='o') :B
+        #       B
+        #     | T  | F 
+        # A T | OK | NG
+        #   F | NG | OK
+        ok&=(cnt>=k)==(r[i]=='o')
+    ans+=ok #Trueなら1足される
 print(ans)
